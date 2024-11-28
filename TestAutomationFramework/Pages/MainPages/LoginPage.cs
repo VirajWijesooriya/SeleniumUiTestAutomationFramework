@@ -54,13 +54,16 @@ namespace TestAutomationFramework.Pages.MainPages
             btnLogin.Click();
         }
 
-        public void Login(string userName, string password)
+        public HomePageAfterLogin Login(string userName, string password)
         {
             EnterUserName(userName);
             EnterPassword(password);
 
-            Thread.Sleep(3000);
+            Thread.Sleep(500);
             PressLogin();
+
+            return new HomePageAfterLogin(Browser);
+
         }
 
 

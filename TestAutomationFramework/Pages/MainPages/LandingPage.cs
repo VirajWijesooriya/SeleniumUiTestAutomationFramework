@@ -14,6 +14,9 @@ namespace TestAutomationFramework.Pages.MainPages
         [FindsBy(How = How.CssSelector, Using = "a[href^='https://magento.softwaretestingboard.com/customer/account/login']")]
         private IList<IWebElement> btnSignIn;
 
+        [FindsBy(How = How.CssSelector, Using = ".logged-in")]
+        private IList<IWebElement> txtWelcomeBanner;
+
 
 
         public LandingPage(TestBrowser browser)
@@ -31,6 +34,11 @@ namespace TestAutomationFramework.Pages.MainPages
         {
             WaitForElementToClickable_Short(btnSignIn.FirstOrDefault());
             btnSignIn.FirstOrDefault().Click(); 
+        }
+
+        internal bool IsOnLandingPageWithLoggedIn()
+        {
+            return IsElementActive(txtWelcomeBanner.FirstOrDefault());
         }
     }
 }

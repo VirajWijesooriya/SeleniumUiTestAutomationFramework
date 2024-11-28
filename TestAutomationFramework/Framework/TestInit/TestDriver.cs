@@ -91,7 +91,7 @@ namespace TestAutomationFramework.Framework.TestInit
                     try
                     {
                         StartBrowserAndVisitBaseUrl();
-                        if (testBrowser.driver.Url.Contains(targetEnv))
+                        if (testBrowser.driver.Url.Contains(testBrowser.BaseUrl))
                         {
                             break;
                         }
@@ -105,19 +105,6 @@ namespace TestAutomationFramework.Framework.TestInit
 
                 WebDriverWait wait = new WebDriverWait(testBrowser.driver, TimeSpan.FromSeconds(50));
                 wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.UrlToBe(loginUrl));
-
-                // Login the user if there's only 1 user role give. Otherwise login should be hanled at the test level
-                if (userRoles.Count == 1)
-                {
-                    // Login with user
-                    LoginPage loginPage = new LoginPage(testBrowser);
-                    loginPage.WaitForPageLoad();
-                    loginPage.Login(testUsers[0].UserName, testUsers[0].UserPwd);
-
-                    LandingPage brokerLandingPage = new LandingPage(testBrowser);
-                    brokerLandingPage.WaitForPageLoad();
-                    brokerLandingPage.WaitForLandingPageLoad();
-                }
             }
         }
 
