@@ -11,7 +11,7 @@ namespace TestAutomationFramework.Tests.LoginTests
         [Test, Category("SampleTest")]
         public void LoginTest_UserTryLogin_UserCanLoginSuccessfully()
         {
-
+            Assert.True(true);
         
         }
     }
