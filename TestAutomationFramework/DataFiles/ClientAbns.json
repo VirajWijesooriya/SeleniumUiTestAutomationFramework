@@ -1,0 +1,12 @@
+{
+  "Company": [
+    {
+      "CompanyId": "NewCompanyAbn1",
+      "Abn": "26000426282"
+    },
+    {
+      "CompanyId": "NewCompanyAcn1",
+      "Abn": "092633924"
+    }
+  ]
+}

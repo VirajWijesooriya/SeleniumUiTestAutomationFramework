@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>TestAutomationFramework</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\EntityPages\**" />
+    <Compile Remove="Src\**" />
+    <Compile Remove="Tests\ApprovalConditionsTests\**" />
+    <Compile Remove="Tests\Credit_Tests\**" />
+    <EmbeddedResource Remove="Pages\EntityPages\**" />
+    <EmbeddedResource Remove="Src\**" />
+    <EmbeddedResource Remove="Tests\ApprovalConditionsTests\**" />
+    <EmbeddedResource Remove="Tests\Credit_Tests\**" />
+    <None Remove="Pages\EntityPages\**" />
+    <None Remove="Src\**" />
+    <None Remove="Tests\ApprovalConditionsTests\**" />
+    <None Remove="Tests\Credit_Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.24" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects" Version="3.11.0" />
+    <PackageReference Include="DotNetSeleniumExtras.PageObjects.Core" Version="4.14.1" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="Selenium.Support" Version="4.15.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.15.0" />
+	<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+	<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="130.0.6723.6900" />
+	<PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="126.0.2592.87" />
+	<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Util\Misc\" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataFiles\ClientAbns.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DataFiles\Environments.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DataFiles\LoanStaticData.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="DataFiles\Users.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

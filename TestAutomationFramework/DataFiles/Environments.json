@@ -1,0 +1,14 @@
+{
+  "environments": [
+    {
+      "environmentName": "test",
+      "baseUrl": "https://magento.softwaretestingboard.com",
+      "loginPageUrl": "/",
+      "connectionString": "test",
+      "apiAuthUserName": "test",
+      "apiAuthPassword": "test",
+      "apiAuthClientApplicationClientId": "test",
+      "apiAuthClientApplicationSecret": "test"
+    }
+  ]
+}

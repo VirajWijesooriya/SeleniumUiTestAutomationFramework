@@ -1,0 +1,9 @@
+{
+  "environments": [
+    {
+      "environmentName": "test",
+      "__Comment1__": "_PPSR_LoanIds_",
+      "ppsrLoanCFA": "123456"
+    }
+  ]
+}
